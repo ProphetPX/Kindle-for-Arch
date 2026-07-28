@@ -1,45 +1,31 @@
+# Kindle App for Arch Linux
 
-# Kindle App for Arch Linux (forked from the one for Ubuntu)
+A simple Kindle desktop app for Arch Linux based on Electron JS. It wraps Amazon's cloud reader in a secure desktop frame.
 
-![app open](./assets/screenshot.png)
+## Prerequisites
 
-A simple Kindle desktop app for Arch [FORKED FROM: Ubuntu (or derived distros)] based on electron js.
-
-Install it easily and start reading on your Linux desktop. 
-
-## Install
-
-To install this application, you need
-
-- [Ubuntu](https://ubuntu.com/) based distros
-- [Gnome](https://www.gnome.org/) or [KDE](https://kde.org/)
-- [nodejs](https://nodejs.org/en)
-- [npm](https://www.npmjs.com/)
-
-Then run at your terminal:
-```bash
-mkdir -p ~/kindle
-git clone https://github.com/Dpbm/Kindle-for-ubuntu.git ~/kindle
-cd ~/kindle
-chmod +x ./install.sh
-./install.sh
-```
-within a few seconds, the Kindle icon will appear on your applications hub.
-
-## Uninstalling
-
-To uninstall it you may run:
+Before building, make sure your system has the standard base-devel tools installed:
 
 ```bash
-cd ~/kindle
-chmod +x uninstall.sh
-./uninstall.sh
+sudo pacman -S base-devel
 ```
 
-## Other Versions
+## Installation
 
-This small application is based on Kindle's web version, so your experience will differ a lot from its mobile usage.
+Since this package features a dedicated Arch `PKGBUILD` script, you can build and install it natively using `makepkg`. 
 
-Due to that, [@SugarRayLua](https://github.com/SugarRayLua) shared a step-by-step tutorial on [this issue](https://github.com/make-install-linux/Kindle-for-ubuntu/issues/1) showing how to use the windows app on Linux, [check it out](https://github.com/make-install-linux/Kindle-for-ubuntu/issues/1#issuecomment-2558387213).
+Open your terminal inside this repository directory and run:
 
-Thanks [@SugarRayLua](https://github.com/SugarRayLua) 🙏🙏🙏!!
+```bash
+makepkg -si
+```
+
+This will automatically check for dependencies, build the local packages, and install the `kindle-for-arch` utility system-wide.
+
+## Running the App
+
+Once installed, you can launch the application directly from your system's applications menu, or by running this command in your terminal:
+
+```bash
+kindle
+```
