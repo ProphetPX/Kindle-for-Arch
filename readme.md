@@ -2,6 +2,9 @@
 
 A simple Kindle desktop app for Arch Linux based on Electron JS. It wraps Amazon's cloud reader in a secure desktop frame.
 
+![Kindle App Screenshot](assets/screenshot.png)
+
+
 ## Prerequisites
 
 Before building, make sure your system has the standard base-devel tools installed:
