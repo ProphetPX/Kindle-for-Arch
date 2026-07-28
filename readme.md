@@ -1,9 +1,9 @@
 
-# Kindle App for ubuntu
+# Kindle App for Arch Linux (forked from the one for Ubuntu)
 
 ![app open](./assets/screenshot.png)
 
-A simple Kindle desktop app for Ubuntu (or derived distros) based on electron js.
+A simple Kindle desktop app for Arch [FORKED FROM: Ubuntu (or derived distros)] based on electron js.
 
 Install it easily and start reading on your Linux desktop. 
 
