@@ -1,3 +1,4 @@
+process.chdir(__dirname);
 const { app, BrowserWindow } = require('electron');
 
 const KINDLE_URL = 'https://read.amazon.com/';
@@ -7,7 +8,11 @@ function createWindow() {
   const win = new BrowserWindow({
     width: 800,
     height: 600,
-    autoHideMenuBar: true
+    autoHideMenuBar: true,
+    webPreferences: {
+      nodeIntegration: false,
+      contextIsolation: true
+    }
   })
 
   win.loadURL(KINDLE_URL);
